@@ -240,3 +240,216 @@ footer{
   text-align: center;
   padding: 20px;
 }
+/* --- СТИЛИ ДЛЯ СТРАНИЦЫ ДОНАТА --- */
+
+/* Баннер сверху */
+.donate-hero {
+  background: radial-gradient(circle at center, #17243d 0%, #0b0d12 100%);
+  padding: 160px 20px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+/* Красивые линии на фоне (как на moonvale) */
+.donate-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%; width: 200%; height: 200%;
+  background-image: repeating-radial-gradient(
+    circle at center,
+    transparent 0,
+    transparent 40px,
+    rgba(91, 140, 255, 0.05) 41px,
+    transparent 42px
+  );
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.promo-badge {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+  position: relative;
+}
+/* Маленькая желтая плашка со скидкой */
+.promo-badge::after {
+  content: '-10%';
+  position: absolute;
+  bottom: -8px; right: -10px;
+  background: #ffcc00;
+  color: #000;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 800;
+  transform: rotate(-10deg);
+}
+
+/* Меню категорий (табы) */
+.donate-tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -30px; /* Наложение на баннер */
+  position: relative;
+  z-index: 10;
+}
+.donate-tabs {
+  display: flex;
+  background: rgba(25, 28, 36, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50px;
+  padding: 8px;
+  gap: 5px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.tab-btn:hover { color: #fff; }
+.tab-btn.active {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* Сетка товаров */
+.donate-store {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* Карточка товара */
+.store-card {
+  background: #151820;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+.store-card:hover {
+  border-color: rgba(91, 140, 255, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+.store-card-top h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.store-card-top p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.store-img-placeholder {
+  font-size: 60px;
+  text-align: right;
+  margin-top: -40px; /* Поднимаем картинку вправо */
+  opacity: 0.8;
+}
+.store-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.store-price {
+  font-size: 22px;
+  font-weight: 800;
+  font-family: 'Oswald', sans-serif;
+}
+.store-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.icon-btn {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  font-size: 14px;
+}
+.icon-btn:hover { background: rgba(255,255,255,0.15); }
+.buy-btn {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.buy-btn:hover {
+  background: var(--accent);
+  text-decoration: none;
+}
+
+/* Блок помощи (Boosty) */
+.donate-help {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+.help-content {
+  background: linear-gradient(90deg, #1c2230 0%, #151820 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.help-content h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.help-content p {
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 700px;
+}
+
+/* --- Мобильная версия для доната --- */
+@media (max-width: 768px) {
+  .donate-tabs { flex-wrap: wrap; justify-content: center; border-radius: 20px; }
+  .tab-btn { padding: 8px 14px; font-size: 14px; }
+  .store-img-placeholder { font-size: 40px; margin-top: -10px; }
+  .help-content { flex-direction: column; text-align: center; }
+}
