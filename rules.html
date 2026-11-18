@@ -4,25 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Правила — SubCoin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-  <nav class="nav">
-    <div class="logo">Sub<span>Coin</span></div>
+  <nav class="nav-pill">
+    <div class="logo">
+      <span class="logo-icon">S</span> 
+    </div>
     <ul>
       <li><a href="index.html">Главная</a></li>
-      <li><a href="rules.html">Правила</a></li>
       <li><a href="wiki.html">Вики</a></li>
-      <li><a href="map.html">Карта</a></li>
-      <li><a href="https://discord.gg/ВАШ_ИНВАЙТ" target="_blank" rel="noopener">Discord</a></li>
+      <li><a href="rules.html" class="active">Правила</a></li>
+      <li><a href="map.html">Онлайн-карта</a></li>
     </ul>
+    <div class="nav-right">
+      <a href="https://discord.gg/ВАШ_ИНВАЙТ" target="_blank" rel="noopener" class="btn-discord">Войти</a>
+    </div>
     <button class="burger" aria-label="Меню">☰</button>
   </nav>
 </header>
 
-<div class="content">
-  <h1>Правила сервера SubCoin</h1>
+<div class="page-content">
+  <h1 class="page-title">Правила сервера SubCoin</h1>
   <div class="notice">Заходя на сервер, вы соглашаетесь с этими правилами. Незнание правил не освобождает от ответственности.</div>
 
   <h2>1. Общие положения</h2>
@@ -52,7 +60,9 @@
   <p>Если вы считаете бан несправедливым — напишите в Discord в канал <code>#апелляции</code>, указав ник и причину бана.</p>
 </div>
 
-<footer>SubCoin — приватный Minecraft-проект.</footer>
+<footer>
+  SubCoin — приватный Minecraft-проект.
+</footer>
 <script src="script.js"></script>
 </body>
 </html>
