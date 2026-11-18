@@ -664,3 +664,36 @@ footer{
   opacity: 0.5;
   pointer-events: none;
 }
+/* Стили для блока с правилами */
+.rules-box {
+  background: #151820; /* Темная подложка */
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.rules-box h2 {
+  margin-top: 0; /* Убираем лишний отступ у первого заголовка */
+}
+
+.rules-box h2:not(:first-child) {
+  margin-top: 40px; /* Отступ между смысловыми блоками */
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 30px;
+}
+
+/* Делаем код (названия каналов) красивым */
+.rules-box code {
+  background: rgba(91, 140, 255, 0.15);
+  color: var(--accent2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .rules-box {
+    padding: 20px;
+  }
+}
