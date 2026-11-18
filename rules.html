@@ -24,7 +24,7 @@
       <li><a href="donate.html">Донат</a></li>
     </ul>
     <div class="nav-right">
-      <a href="https://discord.gg/ВАШ_ИНВАЙТ" target="_blank" rel="noopener" class="btn-discord">Войти</a>
+      <a href="https://discord.gg/estriperconor" target="_blank" rel="noopener" class="btn-discord">Войти</a>
     </div>
     <button class="burger" aria-label="Меню">☰</button>
   </nav>
@@ -38,7 +38,6 @@
     </p>
   </div>
 </section>
-  <!-- МЕНЮ ВКЛАДОК -->
   <div class="tabs-nav">
     <button class="tab-btn active" data-target="tab-general">📖 Общие</button>
     <button class="tab-btn" data-target="tab-forbidden">🚫 Игровые</button>
@@ -47,10 +46,8 @@
     <button class="tab-btn" data-target="tab-appeals">📩 Чат</button>
   </div>
 
-  <!-- КОНТЕЙНЕР С КОНТЕНТОМ ВКЛАДОК -->
   <div class="tabs-content-box">
     
-    <!-- Вкладка 1: Общие -->
     <div id="tab-general" class="tab-content active">
       <h2>Общие правила</h2>
       <ul>
@@ -74,7 +71,6 @@
       </ul>
     </div>
 
-    <!-- Вкладка 2: Запрещено -->
     <div id="tab-forbidden" class="tab-content">
       <h2>Правила игры на сервере</h2>
       <ul>
@@ -89,7 +85,6 @@
       </ul>
     </div>
 
-    <!-- Вкладка 3: PvP -->
     <div id="tab-pvp" class="tab-content">
       <h2>Технические правила сервера</h2>
       <ul>
@@ -100,7 +95,6 @@
       </ul>
     </div>
 
-    <!-- Вкладка 4: Экономика -->
     <div id="tab-economy" class="tab-content">
       <h2>Правила аккаунтов</h2>
       <ul>
@@ -113,7 +107,6 @@
       </ul>
     </div>
 
-    <!-- Вкладка 5: Апелляции -->
     <div id="tab-appeals" class="tab-content">
       <h2>Правила чата</h2>
       <ul>
@@ -131,7 +124,6 @@
   </div>
 </div>
 
-<!-- НОВЫЙ КРАСИВЫЙ ФУТЕР -->
 <footer class="main-footer">
   <div class="footer-top">
     <div class="footer-logo">
@@ -148,7 +140,7 @@
   
   <div class="footer-bottom">
     <div class="footer-socials">
-      <a href="https://discord.gg/ВАШ_ИНВАЙТ" target="_blank" title="Discord">💬</a>
+      <a href="https://discord.gg/estriperconor" target="_blank" title="Discord">💬</a>
       <a href="#" target="_blank" title="Telegram">✈️</a>
       <a href="#" target="_blank" title="YouTube">▶️</a>
       <a href="#" target="_blank" title="Boosty">🎁</a>
@@ -164,26 +156,18 @@
 </footer>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Находим все кнопки вкладок
     const tabBtns = document.querySelectorAll('.tab-btn');
-    // Находим всё содержимое вкладок
     const tabContents = document.querySelectorAll('.tab-content');
 
-    // Если кнопок нет на странице (например, мы на Главной), просто выходим
     if (tabBtns.length === 0) return;
 
-    // Для каждой кнопки добавляем обработчик клика
     tabBtns.forEach(function(btn) {
       btn.addEventListener('click', function() {
-        // 1. Убираем активный класс у всех кнопок
         tabBtns.forEach(function(b) { b.classList.remove('active'); });
-        // 2. Убираем активный класс у всех блоков текста
         tabContents.forEach(function(c) { c.classList.remove('active'); });
 
-        // 3. Добавляем класс 'active' на нажатую кнопку
         btn.classList.add('active');
 
-        // 4. Находим ID нужного блока и показываем его
         const targetId = btn.getAttribute('data-target');
         const targetContent = document.getElementById(targetId);
         
