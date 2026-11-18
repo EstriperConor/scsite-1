@@ -165,3 +165,78 @@ footer{
   .nav-right { display: none; } /* Прячем кнопку Войти на мобилке (можно оставить, если нужно) */
   .hero-title { line-height: 1.1; }
 }
+/* --- СТИЛИ ДЛЯ ВНУТРЕННИХ СТРАНИЦ (Вики, Правила, Карта) --- */
+.page-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 140px 20px 80px; /* Большой отступ сверху, чтобы меню не перекрывало заголовок */
+}
+
+.page-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(32px, 5vw, 48px);
+  margin-bottom: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.page-content h2 {
+  font-size: 26px;
+  margin: 40px 0 15px;
+  color: var(--accent2);
+  font-weight: 600;
+}
+
+.page-content p, .page-content li {
+  color: #cfd3da;
+  font-size: 17px;
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.page-content ul, .page-content ol {
+  padding-left: 25px;
+  margin-bottom: 25px;
+}
+
+.page-content code {
+  background: rgba(255,255,255,0.1);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-family: monospace;
+  color: var(--accent2);
+}
+
+.notice {
+  background: rgba(91, 140, 255, 0.1);
+  border-left: 4px solid var(--accent);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 30px 0;
+  color: #e0e0e0;
+}
+
+.map-frame {
+  width: 100%;
+  height: 70vh;
+  min-height: 500px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  background: #000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.map-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background: var(--panel);
+  border: 2px dashed rgba(255,255,255,0.1);
+  border-radius: 20px;
+  color: var(--muted);
+  text-align: center;
+  padding: 20px;
+}
