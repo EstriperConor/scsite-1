@@ -640,3 +640,27 @@ footer{
   .footer-legal { text-align: center; }
   .footer-legal a { margin: 0 8px; display: inline-block; margin-bottom: 8px; }
 }
+/* Баннер сверху */
+.rule-hero {
+  background: radial-gradient(circle at center, #17243d 0%, #0b0d12 100%);
+  padding: 160px 20px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+/* Красивые линии на фоне (как на moonvale) */
+.rule-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%; width: 200%; height: 200%;
+  background-image: repeating-radial-gradient(
+    circle at center,
+    transparent 0,
+    transparent 40px,
+    rgba(91, 140, 255, 0.05) 41px,
+    transparent 42px
+  );
+  opacity: 0.5;
+  pointer-events: none;
+}
