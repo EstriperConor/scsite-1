@@ -864,3 +864,95 @@ footer{
     padding: 30px 20px;
   }
 }
+/* --- СТИЛИ ДЛЯ ВКЛАДОК (ПРАВИЛА) --- */
+
+.tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  background: rgba(25, 28, 36, 0.8);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--muted);
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tab-btn:hover {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  border-color: rgba(91, 140, 255, 0.3);
+}
+
+/* Активная кнопка */
+.tab-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 4px 15px rgba(91, 140, 255, 0.4);
+}
+
+/* Контейнер для текста */
+.tabs-content-box {
+  background: #151820;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  min-height: 300px; /* Чтобы блок не прыгал, если текста мало */
+}
+
+/* Скрываем все вкладки по умолчанию */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Показываем только активную */
+.tab-content.active {
+  display: block;
+}
+
+.tab-content h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 26px;
+  color: var(--accent2);
+  margin-bottom: 20px;
+}
+
+.tab-content p, .tab-content li {
+  color: #cfd3da;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.tab-content ul {
+  padding-left: 20px;
+}
+
+.tab-content strong {
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .tabs-content-box { padding: 25px 20px; }
+  .tab-btn { padding: 10px 14px; font-size: 14px; flex: 1 1 40%; justify-content: center; }
+}
