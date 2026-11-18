@@ -30,18 +30,28 @@
   </nav>
 </header>
 
-<div class="page-content">
-  <h1 class="page-title">Онлайн-карта SubCoin</h1>
-  <p style="color:var(--muted); margin-bottom: 30px;">Карта обновляется в реальном времени.</p>
+<!-- БАННЕР СВЕРХУ -->
+<section class="donate-hero" style="padding-bottom: 40px;">
+  <div class="donate-hero-content">
+    <h1 class="page-title" style="margin-bottom: 10px;">ОНЛАЙН-КАРТА</h1>
+    <p style="font-size: 18px; color: #d0d0d0; max-width: 600px; margin: 0 auto;">
+      Интерактивная карта мира SubCoin, обновляющаяся в реальном времени.
+    </p>
+  </div>
+</section>
 
-  <!-- ВАРИАНТ 1: Заглушка (если карта еще не подключена) -->
+<!-- КОНТЕЙНЕР ДЛЯ КАРТЫ -->
+<div class="page-content" style="margin-top: -40px; position: relative; z-index: 10; max-width: 1100px;">
+  
+  <!-- Заглушка (если карта еще не подключена) -->
   <div id="map-container" class="map-fallback">
     <p>Карта пока не подключена.</p>
     <p>Скоро здесь появится интерактивная карта мира.</p>
+    <!-- Замените ссылку ниже на адрес вашей карты -->
     <a class="btn btn-primary" href="https://map.ваш-домен.ru" target="_blank" rel="noopener" style="margin-top: 20px;">Открыть карту в новой вкладке</a>
   </div>
 
-  <!-- ВАРИАНТ 2: Рабочий iframe (раскомментируйте, когда настроите карту) -->
+  <!-- Рабочий iframe (раскомментируйте, когда настроите карту) -->
   <!--
   <iframe
     class="map-frame"
@@ -53,6 +63,7 @@
   -->
 </div>
 
+<!-- НОВЫЙ КРАСИВЫЙ ФУТЕР -->
 <footer class="main-footer">
   <div class="footer-top">
     <div class="footer-logo">
@@ -83,5 +94,6 @@
     </div>
   </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
