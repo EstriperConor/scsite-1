@@ -697,3 +697,170 @@ footer{
     padding: 20px;
   }
 }
+/* --- СТИЛИ ДЛЯ СТРАНИЦЫ ПРАВИЛ С САЙДБАРОМ --- */
+
+.rules-layout {
+  max-width: 1200px;
+  margin: 120px auto 60px; /* Отступ сверху, чтобы не мешало меню */
+  padding: 0 20px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* --- ЛЕВОЕ МЕНЮ (САЙДБАР) --- */
+.rules-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 100px; /* Меню будет прилипать при прокрутке */
+  background: rgba(25, 28, 36, 0.6);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 1px;
+}
+
+.sidebar-title .icon {
+  background: var(--accent);
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.rules-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rules-sidebar li {
+  margin-bottom: 8px;
+}
+
+.rules-sidebar a {
+  display: block;
+  color: var(--muted);
+  font-size: 15px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.rules-sidebar a:hover {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  padding-left: 18px; /* Эффект сдвига при наведении */
+}
+
+/* --- ПРАВАЯ ЧАСТЬ (КОНТЕНТ) --- */
+.rules-content {
+  flex-grow: 1;
+  background: #151820;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.rules-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.rules-subtitle {
+  color: var(--muted);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Стили для самих разделов правил */
+.rule-section {
+  margin-bottom: 50px;
+  scroll-margin-top: 120px; /* Отступ при клике на ссылку, чтобы меню не закрывало заголовок */
+}
+
+.rule-section:last-child {
+  margin-bottom: 0;
+}
+
+.rule-section h2 {
+  font-size: 26px;
+  color: var(--accent2);
+  margin-bottom: 20px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.rule-section p, .rule-section li {
+  color: #cfd3da;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.rule-section ul {
+  padding-left: 20px;
+}
+
+.rule-section strong {
+  color: #fff;
+}
+
+.rule-section code {
+  background: rgba(91, 140, 255, 0.15);
+  color: var(--accent2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* --- МОБИЛЬНАЯ ВЕРСИЯ (АДАПТИВ) --- */
+@media (max-width: 900px) {
+  .rules-layout {
+    flex-direction: column;
+    margin-top: 90px;
+  }
+  
+  .rules-sidebar {
+    width: 100%;
+    position: static; /* На телефоне меню не липнет, а просто стоит сверху */
+    padding: 20px;
+  }
+  
+  .rules-sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .rules-sidebar li {
+    margin-bottom: 0;
+  }
+  
+  .rules-sidebar a {
+    padding: 8px 12px;
+    font-size: 14px;
+    background: rgba(255,255,255,0.03);
+  }
+
+  .rules-content {
+    padding: 30px 20px;
+  }
+}
