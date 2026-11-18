@@ -5,34 +5,48 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SubCoin — приватный ванильный Minecraft-сервер</title>
 <meta name="description" content="SubCoin — приватный ванильный сервер Minecraft с городами, экономикой и живым сообществом.">
+<!-- Подключаем красивый шрифт для заголовков -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-  <nav class="nav">
-    <div class="logo">Sub<span>Coin</span></div>
+  <nav class="nav-pill">
+    <div class="logo">
+      <!-- Иконка-заглушка, можете заменить на свою картинку -->
+      <span class="logo-icon">S</span> 
+    </div>
     <ul>
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="rules.html">Правила</a></li>
+      <li><a href="index.html" class="active">Главная</a></li>
       <li><a href="wiki.html">Вики</a></li>
-      <li><a href="map.html">Карта</a></li>
-      <li><a href="https://discord.gg/ВАШ_ИНВАЙТ" target="_blank" rel="noopener">Discord</a></li>
+      <li><a href="rules.html">Правила</a></li>
+      <li><a href="map.html">Онлайн-карта</a></li>
     </ul>
+    <div class="nav-right">
+      <a href="https://discord.gg/ВАШ_ИНВАЙТ" target="_blank" rel="noopener" class="btn-discord">Войти</a>
+    </div>
     <button class="burger" aria-label="Меню">☰</button>
   </nav>
 </header>
 
-<div class="hero">
-  <h1>Добро пожаловать на <span>SubCoin</span></h1>
-  <p>Приватный ванильный Minecraft-сервер с городами, экономикой и людьми, которые строят долго. Заявки — через Discord.</p>
-  <div class="btns">
-    <a class="btn btn-primary" href="wiki-start.html">Как начать играть</a>
-    <a class="btn btn-ghost" href="map.html">Открыть карту мира</a>
+<!-- Главный экран с фоном и огромной надписью -->
+<section class="hero-main">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">SUBCOIN</h1>
+    <p class="hero-subtitle">Приватный ванильный сервер с городами и экономикой</p>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="wiki-start.html">Начать играть</a>
+      <a class="btn btn-ghost" href="https://discord.gg/ВАШ_ИНВАЙТ" target="_blank">Наш Discord</a>
+    </div>
   </div>
-</div>
+</section>
 
-<section>
-  <h2>Что такое SubCoin</h2>
+<section class="features-section">
+  <h2>Почему SubCoin?</h2>
   <div class="cards">
     <div class="card">
       <h3>🌍 Ванильный мир</h3>
@@ -40,7 +54,7 @@
     </div>
     <div class="card">
       <h3>🏙 Города и экономика</h3>
-      <p>Игроки основывают города, торгуют, вводят свои правила внутри поселений. Экономика — на доверии.</p>
+      <p>Игроки основывают города, торгуют, вводят свои правила внутри поселений.</p>
     </div>
     <div class="card">
       <h3>🛡 Приватность</h3>
