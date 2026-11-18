@@ -30,27 +30,41 @@
   </nav>
 </header>
 
-<div class="page-content">
-  <h1 class="page-title">Как начать играть на SubCoin</h1>
-  
-  <ol>
-    <li><strong>Заявка в Discord.</strong> Перейдите по ссылке на наш Discord и заполните форму в канале <code>#заявки</code>.</li>
-    <li><strong>Дождитесь одобрения.</strong> Администратор проверит заявку и выдаст доступ.</li>
-    <li><strong>Подключитесь к серверу.</strong> IP-адрес сервера выдаётся в Discord после одобрения.</li>
-    <li><strong>Прочитайте правила.</strong> Они обязательны для всех — <a href="rules.html" style="color:var(--accent)">ссылка на правила</a>.</li>
-  </ol>
+<!-- БАННЕР СВЕРХУ -->
+<section class="donate-hero" style="padding-bottom: 40px;">
+  <div class="donate-hero-content">
+    <h1 class="page-title" style="margin-bottom: 10px;">КАК НАЧАТЬ ИГРАТЬ</h1>
+    <p style="font-size: 18px; color: #d0d0d0; max-width: 600px; margin: 0 auto;">
+      Пошаговая инструкция для новых игроков нашего сервера.
+    </p>
+  </div>
+</section>
 
-  <div class="notice">Сервер приватный: без заявки в Discord подключиться нельзя. Это сделано для безопасности игроков и их построек.</div>
+<!-- КОНТЕЙНЕР ДЛЯ ТЕКСТА -->
+<div class="page-content" style="margin-top: -40px; position: relative; z-index: 10;">
+  <div class="rules-box"> <!-- Используем ту же подложку, что и в правилах -->
+    
+    <ol>
+      <li><strong>Заявка в Discord.</strong> Перейдите по ссылке на наш Discord и заполните форму в канале <code>#заявки</code>.</li>
+      <li><strong>Дождитесь одобрения.</strong> Администратор проверит заявку и выдаст доступ.</li>
+      <li><strong>Подключитесь к серверу.</strong> IP-адрес сервера выдаётся в Discord после одобрения.</li>
+      <li><strong>Прочитайте правила.</strong> Они обязательны для всех — <a href="rules.html" style="color:var(--accent)">ссылка на правила</a>.</li>
+    </ol>
 
-  <h2>Базовые команды</h2>
-  <ul>
-    <li><code>/spawn</code> — телепорт на спавн</li>
-    <li><code>/tpa &lt;ник&gt;</code> — запрос на телепорт к игроку</li>
-    <li><code>/sethome</code> — установить точку дома</li>
-    <li><code>/home</code> — телепорт домой</li>
-  </ul>
+    <div class="notice">Сервер приватный: без заявки в Discord подключиться нельзя. Это сделано для безопасности игроков и их построек.</div>
+
+    <h2>Базовые команды</h2>
+    <ul>
+      <li><code>/spawn</code> — телепорт на спавн</li>
+      <li><code>/tpa &lt;ник&gt;</code> — запрос на телепорт к игроку</li>
+      <li><code>/sethome</code> — установить точку дома</li>
+      <li><code>/home</code> — телепорт домой</li>
+    </ul>
+
+  </div>
 </div>
 
+<!-- НОВЫЙ КРАСИВЫЙ ФУТЕР -->
 <footer class="main-footer">
   <div class="footer-top">
     <div class="footer-logo">
@@ -81,5 +95,6 @@
     </div>
   </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
