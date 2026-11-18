@@ -453,3 +453,190 @@ footer{
   .store-img-placeholder { font-size: 40px; margin-top: -10px; }
   .help-content { flex-direction: column; text-align: center; }
 }
+/* --- БЛОК ВОПРОСОВ И ОТВЕТОВ (FAQ) --- */
+.faq-section {
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.faq-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Сама плашка вопроса */
+.faq-item {
+  background: #151820;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.faq-item:hover {
+  border-color: rgba(91, 140, 255, 0.3);
+}
+
+/* Кнопка с вопросом */
+.faq-question {
+  padding: 20px 24px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  list-style: none; /* Убираем стандартный треугольник браузера */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Убираем стандартный маркер в Safari */
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+/* Рисуем свою стрелочку (галочку) */
+.faq-question::after {
+  content: '⌄';
+  font-size: 24px;
+  color: var(--muted);
+  transition: 0.3s;
+  line-height: 1;
+}
+
+/* Поворот стрелочки при открытии */
+.faq-item[open] .faq-question::after {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+
+/* Плавное появление ответа */
+.faq-answer {
+  padding: 0 24px 20px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- НОВЫЙ КРАСИВЫЙ ФУТЕР --- */
+.main-footer {
+  background: #0b0d12;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 60px 20px 30px;
+  margin-top: 80px;
+}
+
+.footer-top {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.footer-socials a:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.footer-legal {
+  text-align: right;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-legal a {
+  color: var(--muted);
+  margin-left: 16px;
+  transition: 0.2s;
+}
+
+.footer-legal a:hover {
+  color: #fff;
+}
+
+.footer-legal p {
+  margin-top: 12px;
+}
+
+/* Мобильная версия футера и FAQ */
+@media (max-width: 768px) {
+  .footer-top { flex-direction: column; text-align: center; justify-content: center; }
+  .footer-links { justify-content: center; }
+  .footer-bottom { flex-direction: column; align-items: center; text-align: center; }
+  .footer-legal { text-align: center; }
+  .footer-legal a { margin: 0 8px; display: inline-block; margin-bottom: 8px; }
+}
