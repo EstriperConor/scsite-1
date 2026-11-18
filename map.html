@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Карта мира — SubCoin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <div class="logo">Sub<span>Coin</span></div>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="rules.html">Правила</a></li>
+      <li><a href="wiki.html">Вики</a></li>
+      <li><a href="map.html">Карта</a></li>
+      <li><a href="https://discord.gg/ВАШ_ИНВАЙТ" target="_blank" rel="noopener">Discord</a></li>
+    </ul>
+    <button class="burger" aria-label="Меню">☰</button>
+  </nav>
+</header>
+
+<div class="content" style="max-width:1100px">
+  <h1>Онлайн-карта SubCoin</h1>
+  <p style="color:var(--muted);margin-bottom:24px">
+    Карта обновляется в реальном времени. Если она не загрузилась — откройте её в новой вкладке.
+  </p>
+
+  <!-- ВАРИАНТ 1: если у вас BlueMap, замените ссылку ниже на адрес вашей карты -->
+  <div id="map-container" class="map-fallback">
+    <p>Карта пока не подключена.</p>
+    <p>Вставьте сюда iframe вашей BlueMap или Dynmap (см. комментарий в коде).</p>
+    <a class="btn btn-ghost" href="https://map.ваш-домен.ru" target="_blank" rel="noopener">Открыть карту в новой вкладке</a>
+  </div>
+
+  <!--
+  ВАРИАНТ 2: рабочий iframe.
+  Раскомментируйте блок ниже и укажите реальный адрес карты.
+
+  <iframe
+    class="map-frame"
+    src="https://map.ваш-домен.ru"
+    title="Онлайн-карта SubCoin"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+  -->
+</div>
+
+<footer>SubCoin — приватный Minecraft-проект.</footer>
+<script src="script.js"></script>
+</body>
+</html>
